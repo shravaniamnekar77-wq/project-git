@@ -1,61 +1,89 @@
 # ☕ Brew & Bean - Coffee Shop Website
 
-A modern, responsive and attractive **Coffee Shop Frontend Website** built using **HTML5 and CSS3**.
+A modern, responsive and professional **Coffee Shop Frontend Website** built using HTML, CSS and JavaScript.
 
-## 🌐 Live Preview
-
-🔗 **Live Demo:** [View Website](#)
+Brew & Bean provides a clean and attractive interface for showcasing coffee products, special offers, customer reviews and contact information.
 
 ---
 
-## 📌 About The Project
+## 🌐 Live Demo
 
-**Brew & Bean** is a modern coffee shop website designed with a warm and elegant UI.
+🔗 **Live Website:**  
+https://shravianmnekar77-wq.github.io/project-git/
 
-The website provides customers with an easy way to:
+---
 
-- ☕ Explore different coffee products
-- 📋 View the coffee menu
-- 🛒 Add products to cart
-- ⭐ Read customer reviews
-- 📍 Find cafe contact information
-- 📩 Send a message through the contact form
-- 📱 Browse the website on mobile, tablet and desktop
+## 📸 Project Preview
+
+### 🏠 Home Page
+
+A modern hero section with:
+
+- Premium coffee branding
+- Call-to-action buttons
+- Customer rating
+- Today's special coffee
+- Responsive navigation
+
+### ☕ Menu Section
+
+The menu includes:
+
+- Cappuccino
+- Caramel Latte
+- Iced Coffee
+- Chocolate Donut
+- Classic Espresso
+- Chocolate Cake
+
+Users can filter products by:
+
+- All
+- Coffee
+- Cold Drinks
+- Desserts
 
 ---
 
 ## ✨ Features
 
-- 🏠 Modern Home / Hero Section
-- ☕ Coffee Menu Section
-- 🛒 Add to Cart Buttons
-- 📖 About Us Section
-- 🎁 Special Offer Section
-- ⭐ Customer Reviews
-- 📍 Contact Section
-- 📩 Contact Form
 - 📱 Fully Responsive Design
-- 🎨 Modern Coffee-Themed UI
-- 🔗 Smooth Scrolling Navigation
+- ☕ Modern Coffee Shop UI
+- 🧭 Responsive Navigation Bar
+- 🍵 Coffee Menu Section
+- 🔍 Menu Category Filtering
+- ❤️ Favorite Product Button
+- 🛒 Add to Cart Interaction
+- ⭐ Customer Reviews
+- 🎁 Weekend Special Offer
+- 📧 Newsletter Subscription
+- 📩 Contact Form
+- 📍 Contact Information
+- 📱 Mobile Friendly Layout
+- 🎨 Modern Brown & Cream Color Theme
+- ✨ Smooth Hover Animations
+- 🌐 GitHub Pages Ready
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Technology | Usage |
-|------------|-------|
+| Technology | Purpose |
+|------------|---------|
 | HTML5 | Website Structure |
-| CSS3 | Styling & Layout |
+| CSS3 | Styling & Responsive Design |
+| JavaScript | Interactions & Functionality |
+| Font Awesome | Icons |
 | Google Fonts | Typography |
-| Responsive CSS | Mobile & Tablet Support |
+| Unsplash | Coffee Images |
+| GitHub Pages | Website Hosting |
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-Brew-And-Bean/
+project-git/
 │
 ├── index.html
-├── style.css
 └── README.md
