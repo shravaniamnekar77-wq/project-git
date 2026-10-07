@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean - Coffee Shop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="header">
+        <nav class="navbar">
+
+            <div class="logo">
+                ☕ Brew<span>&</span>Bean
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#menu" class="nav-btn">Order Now</a>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO BREW & BEAN</p>
+
+            <h1>
+                Fresh Coffee.<br>
+                <span>Good Vibes.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover the perfect blend of freshly roasted coffee,
+                delicious food and a cozy atmosphere.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn primary-btn">Explore Menu</a>
+                <a href="#about" class="btn secondary-btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="coffee-circle">
+                ☕
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">☕</div>
+            <h3>Premium Coffee</h3>
+            <p>Freshly roasted premium coffee beans.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🌱</div>
+            <h3>100% Fresh</h3>
+            <p>Fresh ingredients in every cup.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">❤️</div>
+            <h3>Made With Love</h3>
+            <p>Every drink is prepared with care.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <div class="about-card">
+                ☕
+                <h3>Since 2015</h3>
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-title">ABOUT US</p>
+
+            <h2>
+                Coffee Made With
+                <span>Passion</span>
+            </h2>
+
+            <p>
+                At Brew & Bean, we believe coffee is more than just a drink.
+                It's a moment of happiness, a conversation starter and a
+                perfect way to begin your day.
+            </p>
+
+            <p>
+                We carefully select premium coffee beans and roast them
+                to perfection to give you an unforgettable coffee experience.
+            </p>
+
+            <a href="#contact" class="btn primary-btn">Visit Our Cafe</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+    <section class="menu" id="menu">
+
+        <div class="section-heading">
+
+            <p class="section-title">OUR MENU</p>
+
+            <h2>Popular <span>Coffee</span></h2>
+
+            <p>
+                Try our most loved coffee creations.
+            </p>
+
+        </div>
+
+
+        <div class="menu-container">
+
+            <!-- CARD 1 -->
+            <div class="menu-card">
+
+                <div class="menu-image coffee-1">
+                    ☕
+                </div>
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+                        <h3>Espresso</h3>
+                        <span>₹120</span>
+                    </div>
+
+                    <p>
+                        Rich and bold espresso made from premium beans.
+                    </p>
+
+                    <button>+ Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="menu-card">
+
+                <div class="menu-image coffee-2">
+                    ☕
+                </div>
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+                        <h3>Cappuccino</h3>
+                        <span>₹160</span>
+                    </div>
+
+                    <p>
+                        Smooth espresso topped with creamy milk foam.
+                    </p>
+
+                    <button>+ Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="menu-card">
+
+                <div class="menu-image coffee-3">
+                    ☕
+                </div>
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+                        <h3>Caffe Latte</h3>
+                        <span>₹180</span>
+                    </div>
+
+                    <p>
+                        Creamy steamed milk blended with rich espresso.
+                    </p>
+
+                    <button>+ Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+            <div class="menu-card">
+
+                <div class="menu-image coffee-4">
+                    ☕
+                </div>
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+                        <h3>Mocha</h3>
+                        <span>₹190</span>
+                    </div>
+
+                    <p>
+                        Delicious chocolate combined with espresso and milk.
+                    </p>
+
+                    <button>+ Add to Cart</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SPECIAL OFFER ================= -->
+    <section class="offer">
+
+        <div class="offer-content">
+
+            <p>LIMITED TIME OFFER</p>
+
+            <h2>
+                Get 20% Off Your
+                <span>First Order</span>
+            </h2>
+
+            <p>
+                Enjoy your favorite coffee and delicious snacks.
+            </p>
+
+            <a href="#menu" class="btn offer-btn">Order Now</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+    <section class="reviews" id="reviews">
+
+        <div class="section-heading">
+
+            <p class="section-title">CUSTOMER REVIEWS</p>
+
+            <h2>What People <span>Say</span></h2>
+
+        </div>
+
+
+        <div class="review-container">
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Amazing coffee and beautiful atmosphere.
+                    This is my favorite place to relax!"
+                </p>
+
+                <h3>Rahul Patil</h3>
+                <small>Regular Customer</small>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The cappuccino is absolutely delicious.
+                    Highly recommended!"
+                </p>
+
+                <h3>Priya Sharma</h3>
+                <small>Coffee Lover</small>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Great coffee, friendly staff and
+                    very peaceful environment."
+                </p>
+
+                <h3>Akshay More</h3>
+                <small>Happy Customer</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+
+        <div class="contact-content">
+
+            <p class="section-title">CONTACT US</p>
+
+            <h2>Let's Have a <span>Coffee</span></h2>
+
+            <p>
+                Visit us and enjoy freshly brewed coffee with
+                your friends and family.
+            </p>
+
+            <div class="contact-info">
+                <p>📍 FC Road, Pune, Maharashtra</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ hello@brewandbean.com</p>
+            </div>
+
+        </div>
+
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" rows="5"></textarea>
+
+            <button type="submit" class="btn primary-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                ☕ Brew<span>&</span>Bean
+            </div>
+
+            <p>
+                Fresh coffee. Good vibes. Great memories.
+            </p>
+
+            <div class="social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Brew & Bean. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
