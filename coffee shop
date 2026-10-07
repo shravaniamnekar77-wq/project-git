@@ -1,1785 +1,1016 @@
+/* ================= ROOT ================= */
+
+:root {
+    --brown: #7b4b2a;
+    --dark: #241710;
+    --cream: #f8f4ee;
+    --light: #fffaf4;
+    --text: #62584f;
+    --border: #e8ddd2;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.logo i {
+    color: var(--brown);
+    margin-right: 5px;
+}
+
+.logo span,
+h1 span,
+h2 span {
+    color: var(--brown);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #514940;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--brown);
+}
+
+.nav-btn {
+    background: var(--brown);
+    color: white;
+    padding: 11px 19px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background: var(--cream);
+    padding: 85px 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.tag,
+.section-label {
+    color: var(--brown);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tag {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    background: #eee2d6;
+    padding: 9px 14px;
+    border-radius: 50px;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(45px, 5vw, 72px);
+    margin: 22px 0;
+}
+
+.hero-text > p {
+    color: var(--text);
+    max-width: 560px;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin: 32px 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background: var(--brown);
+    color: white;
+}
+
+.secondary {
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    background: transparent;
+}
+
+.hero-info {
+    display: flex;
+    gap: 40px;
+    padding-top: 15px;
+}
+
+.hero-info strong {
+    display: block;
+    font-size: 21px;
+}
+
+.hero-info small {
+    color: var(--text);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.image-card {
+    height: 520px;
+    overflow: hidden;
+    border-radius: 180px 180px 10px 10px;
+    box-shadow: 0 20px 60px rgba(52, 35, 22, .18);
+}
+
+.image-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-card {
+    position: absolute;
+    left: -35px;
+    bottom: 35px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.floating-card i {
+    color: #e5a62b;
+    font-size: 25px;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card small {
+    color: var(--text);
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 35px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+
+.feature {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: #f1e5d9;
+    color: var(--brown);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.feature h3 {
+    font-size: 16px;
+}
+
+.feature p {
+    font-size: 13px;
+    color: var(--text);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-images {
+    position: relative;
+    padding-right: 50px;
+}
+
+.about-main {
+    height: 530px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.experience {
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    background: var(--brown);
+    color: white;
+    padding: 22px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience strong {
+    font-family: "Playfair Display";
+    font-size: 38px;
+}
+
+.experience span {
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 15px 0 22px;
+}
+
+.about-content > p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.about-list {
+    margin: 25px 0;
+}
+
+.about-list div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 11px 0;
+}
+
+.about-list i {
+    color: var(--brown);
+}
+
+
+/* ================= MENU ================= */
+
+.menu {
+    background: var(--cream);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.coffee-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: .3s;
+}
+
+.coffee-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(48,31,19,.12);
+}
+
+.coffee-image {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.coffee-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.coffee-card:hover img {
+    transform: scale(1.06);
+}
+
+.badge {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: var(--brown);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.coffee-info {
+    padding: 20px;
+}
+
+.coffee-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.coffee-title h3 {
+    font-family: "Playfair Display";
+    font-size: 20px;
+}
+
+.coffee-title strong {
+    color: var(--brown);
+}
+
+.coffee-info p {
+    color: var(--text);
+    font-size: 13px;
+    margin: 8px 0 15px;
+}
+
+.coffee-info button {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--brown);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.coffee-info button:hover {
+    background: var(--brown);
+    color: white;
+}
+
+.menu-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* ================= OFFER ================= */
+
+.offer {
+    background: var(--dark);
+    color: white;
+    padding: 70px 0;
+}
+
+.offer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer h2 {
+    max-width: 600px;
+}
+
+.offer p {
+    color: #cfc2b7;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.offer-icon {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #75543e;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 60px;
+    color: #d4a77d;
+}
+
+.light {
+    background: white;
+    color: var(--brown);
+}
+
+
+/* ================= REVIEWS ================= */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.review {
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.stars {
+    color: #e4a72c;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.review > p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.customer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #eadbce;
+    color: var(--brown);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.customer strong,
+.customer small {
+    display: block;
+}
+
+.customer small {
+    color: var(--text);
+    font-size: 11px;
+}
+
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+    background: var(--cream);
+    padding: 60px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.newsletter h2 {
+    font-size: 35px;
+    margin: 8px 0 0;
+}
+
+.newsletter form {
+    display: flex;
+    min-width: 430px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid var(--border);
+    outline: none;
+}
+
+.newsletter button {
+    border: none;
+    padding: 0 22px;
+    background: var(--brown);
+    color: white;
+    font-weight: 600;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact > .container > div > p {
+    color: var(--text);
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-item > i {
+    color: var(--brown);
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.contact-item p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.contact-box {
+    background: var(--cream);
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.contact-box h3 {
+    font-family: "Playfair Display";
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 13px;
+    margin-bottom: 12px;
+    background: white;
+    outline: none;
+    resize: vertical;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: var(--brown);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1b120d;
+    color: white;
+    padding-top: 65px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 70px;
+    padding-bottom: 50px;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    color: #b8aaa0;
+    font-size: 13px;
+    margin-top: 15px;
+    max-width: 350px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer-grid > div:nth-child(2) a {
+    display: block;
+    color: #b8aaa0;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.socials a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #55443a;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.socials a:hover {
+    background: var(--brown);
+}
+
+.copyright {
+    border-top: 1px solid #33251e;
+    text-align: center;
+    padding: 20px;
+    color: #88786d;
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-content,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .feature-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-content,
+    .offer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-info {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        height: 400px;
+    }
+
+    .floating-card {
+        left: 10px;
+    }
+
+    .about-images {
+        padding-right: 20px;
+    }
+
+    .about-main {
+        height: 400px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter h2 {
+        font-size: 30px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        min-height: 48px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Brew & Bean - Premium coffee shop serving freshly roasted coffee and delicious desserts.">
+    <title>Brew Haven | Premium Coffee Shop</title>
 
-    <title>Brew & Bean | Premium Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
-
-    <style>
-
-        /* ================= RESET ================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            background: #fffaf5;
-            color: #2c211c;
-            line-height: 1.6;
-        }
-
-        img {
-            width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button,
-        input,
-        textarea {
-            font-family: inherit;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-
-        /* ================= VARIABLES ================= */
-
-        :root {
-            --brown: #3a2419;
-            --brown-light: #6f4a37;
-            --orange: #b86b3c;
-            --orange-dark: #97552f;
-            --cream: #fffaf5;
-            --cream-dark: #f3e9df;
-            --white: #ffffff;
-            --text-light: #796c64;
-            --border: #e8ddd3;
-        }
-
-
-        /* ================= COMMON ================= */
-
-        .section {
-            padding: 100px 7%;
-        }
-
-        .section-label {
-            color: var(--orange);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-bottom: 14px;
-        }
-
-        .section-heading {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 50px;
-        }
-
-        .section-heading h2,
-        .about-content h2,
-        .contact-info h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(38px, 5vw, 58px);
-            line-height: 1.15;
-            margin-bottom: 18px;
-        }
-
-        .section-heading h2 em,
-        .about-content h2 em,
-        .contact-info h2 em,
-        .hero h1 em,
-        .offer h2 em,
-        .newsletter h2 em {
-            color: var(--orange);
-            font-style: italic;
-        }
-
-        .section-heading p:last-child,
-        .about-content > p,
-        .contact-info > p {
-            color: var(--text-light);
-        }
-
-
-        /* ================= NAVBAR ================= */
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(255, 250, 245, 0.95);
-            backdrop-filter: blur(15px);
-
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .navbar {
-            max-width: 1400px;
-            height: 82px;
-            padding: 0 7%;
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-family: "Playfair Display", serif;
-            font-size: 26px;
-            font-weight: 700;
-
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo > span:not(.logo-icon) {
-            color: var(--orange);
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-
-            display: grid;
-            place-items: center;
-
-            background: var(--brown);
-            color: white;
-
-            border-radius: 50%;
-            font-size: 17px;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            color: #594a42;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            color: var(--orange);
-        }
-
-        .nav-button {
-            background: var(--brown);
-            color: white;
-
-            padding: 12px 20px;
-            border-radius: 30px;
-
-            font-size: 13px;
-            font-weight: 600;
-
-            display: flex;
-            gap: 10px;
-            align-items: center;
-
-            transition: 0.3s;
-        }
-
-        .nav-button:hover {
-            background: var(--orange);
-            transform: translateY(-2px);
-        }
-
-        .menu-toggle {
-            display: none;
-
-            background: none;
-            border: none;
-
-            font-size: 24px;
-            color: var(--brown);
-        }
-
-
-        /* ================= HERO ================= */
-
-        .hero {
-            min-height: 760px;
-
-            display: flex;
-            align-items: center;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(32, 20, 14, 0.93),
-                    rgba(32, 20, 14, 0.65),
-                    rgba(32, 20, 14, 0.25)
-                ),
-                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85");
-
-            background-size: cover;
-            background-position: center;
-
-            color: white;
-        }
-
-        .hero-container {
-            width: 100%;
-            max-width: 1400px;
-
-            padding: 120px 7% 80px;
-            margin: auto;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero-label {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            color: #e5b99a;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 3px;
-
-            margin-bottom: 25px;
-        }
-
-        .hero-label span {
-            width: 35px;
-            height: 1px;
-            background: #e5b99a;
-        }
-
-        .hero h1 {
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(52px, 7vw, 88px);
-
-            line-height: 1.02;
-
-            margin-bottom: 28px;
-        }
-
-        .hero h1 em {
-            display: block;
-        }
-
-        .hero-content > p {
-            max-width: 570px;
-
-            color: #e5d8cf;
-
-            font-size: 17px;
-
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-
-        /* ================= BUTTONS ================= */
-
-        .btn {
-            padding: 14px 24px;
-
-            border-radius: 30px;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 12px;
-
-            border: none;
-
-            font-size: 14px;
-            font-weight: 700;
-
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: var(--orange);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--orange-dark);
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(255,255,255,0.5);
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--brown);
-        }
-
-        .btn-dark {
-            background: var(--brown);
-            color: white;
-        }
-
-        .btn-dark:hover {
-            background: var(--orange);
-        }
-
-        .btn-light {
-            background: white;
-            color: var(--brown);
-        }
-
-        .btn-light:hover {
-            transform: translateY(-3px);
-        }
-
-
-        /* ================= HERO RATING ================= */
-
-        .hero-rating {
-            margin-top: 45px;
-
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .avatars {
-            display: flex;
-        }
-
-        .avatars span {
-            width: 38px;
-            height: 38px;
-
-            border-radius: 50%;
-
-            display: grid;
-            place-items: center;
-
-            background: var(--orange);
-
-            border: 2px solid white;
-
-            margin-left: -8px;
-
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .avatars span:first-child {
-            margin-left: 0;
-        }
-
-        .stars {
-            color: #f5b642;
-            font-size: 13px;
-        }
-
-        .hero-rating p {
-            font-size: 12px;
-            color: #d6c8c0;
-        }
-
-        .hero-rating strong {
-            color: white;
-        }
-
-
-        /* ================= HERO CARD ================= */
-
-        .hero-card {
-            width: 330px;
-        }
-
-        .floating-card {
-            background: rgba(255,255,255,0.96);
-            color: var(--brown);
-
-            padding: 20px;
-
-            border-radius: 18px;
-
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
-
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-
-        }
-
-        .coffee-icon {
-            width: 58px;
-            height: 58px;
-
-            background: #f2e2d4;
-
-            color: var(--orange);
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 14px;
-
-            font-size: 24px;
-        }
-
-        .floating-card small {
-            color: var(--text-light);
-        }
-
-        .floating-card h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 17px;
-        }
-
-        .floating-card p {
-            color: var(--orange);
-            font-weight: 700;
-        }
-
-        .floating-card button {
-            margin-left: auto;
-
-            width: 38px;
-            height: 38px;
-
-            border: none;
-            border-radius: 50%;
-
-            background: var(--brown);
-            color: white;
-        }
-
-
-        /* ================= FEATURES ================= */
-
-        .features {
-            background: white;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .feature-container {
-            max-width: 1300px;
-            margin: auto;
-            padding: 32px 7%;
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 25px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .feature-icon {
-            width: 52px;
-            height: 52px;
-
-            flex-shrink: 0;
-
-            background: #f5e8dc;
-            color: var(--orange);
-
-            border-radius: 50%;
-
-            display: grid;
-            place-items: center;
-
-            font-size: 19px;
-        }
-
-        .feature h3 {
-            font-size: 14px;
-            margin-bottom: 3px;
-        }
-
-        .feature p {
-            font-size: 12px;
-            color: var(--text-light);
-        }
-
-
-        /* ================= ABOUT ================= */
-
-        .about {
-            max-width: 1400px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            gap: 100px;
-
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            height: 580px;
-            object-fit: cover;
-
-            border-radius: 20px;
-        }
-
-        .experience-card {
-            position: absolute;
-
-            right: -30px;
-            bottom: 35px;
-
-            width: 180px;
-            height: 180px;
-
-            border-radius: 50%;
-
-            background: var(--orange);
-            color: white;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            box-shadow: 0 20px 50px rgba(90,40,15,0.25);
-        }
-
-        .experience-card strong {
-            font-family: "Playfair Display", serif;
-            font-size: 48px;
-            line-height: 1;
-        }
-
-        .experience-card span {
-            color: white;
-            text-align: center;
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .about-content > p {
-            margin-bottom: 18px;
-            max-width: 580px;
-        }
-
-        .about-stats {
-            display: flex;
-            gap: 45px;
-
-            margin: 35px 0;
-        }
-
-        .about-stats div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .about-stats strong {
-            font-family: "Playfair Display", serif;
-            font-size: 28px;
-            color: var(--brown);
-        }
-
-        .about-stats span {
-            color: var(--text-light);
-            font-size: 12px;
-        }
-
-        .text-link {
-            color: var(--orange);
-            font-size: 14px;
-            font-weight: 700;
-
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-
-        /* ================= MENU ================= */
-
-        .menu {
-            background: #f7efe8;
-        }
-
-        .menu-filter {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-
-            margin-bottom: 45px;
-
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-
-            border: 1px solid var(--border);
-
-            background: white;
-
-            color: var(--text-light);
-
-            border-radius: 30px;
-
-            font-size: 13px;
-
-            transition: 0.3s;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--brown);
-            color: white;
-            border-color: var(--brown);
-        }
-
-        .menu-grid {
-            max-width: 1250px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .product-card {
-            background: white;
-
-            border-radius: 16px;
-
-            overflow: hidden;
-
-            box-shadow: 0 8px 30px rgba(60,40,20,0.06);
-
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-
-            box-shadow:
-                0 20px 45px rgba(60,40,20,0.12);
-        }
-
-        .product-image {
-            height: 260px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            height: 100%;
-            object-fit: cover;
-
-            transition: 0.5s;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.06);
-        }
-
-        .product-badge {
-            position: absolute;
-            z-index: 2;
-
-            top: 15px;
-            left: 15px;
-
-            padding: 6px 12px;
-
-            border-radius: 20px;
-
-            background: var(--orange);
-            color: white;
-
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .product-badge.new {
-            background: var(--brown);
-        }
-
-        .favorite {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-
-            width: 40px;
-            height: 40px;
-
-            border: none;
-
-            background: white;
-            color: var(--brown);
-
-            border-radius: 50%;
-
-            font-size: 16px;
-        }
-
-        .product-info {
-            padding: 22px;
-        }
-
-        .product-rating {
-            color: #e9a83b;
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-
-        .product-rating span {
-            color: #a39992;
-            margin-left: 4px;
-        }
-
-        .product-info h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 22px;
-            margin-bottom: 7px;
-        }
-
-        .product-info p {
-            color: var(--text-light);
-            font-size: 13px;
-            min-height: 42px;
-        }
-
-        .product-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            margin-top: 18px;
-        }
-
-        .product-bottom strong {
-            font-family: "Playfair Display", serif;
-            font-size: 22px;
-        }
-
-        .add-cart {
-            border: none;
-
-            background: #f3e6db;
-            color: var(--orange);
-
-            padding: 9px 15px;
-
-            border-radius: 8px;
-
-            font-weight: 700;
-
-            transition: 0.3s;
-        }
-
-        .add-cart:hover {
-            background: var(--orange);
-            color: white;
-        }
-
-        .menu-button {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-
-        /* ================= OFFER ================= */
-
-        .offer {
-            min-height: 470px;
-
-            background: var(--brown);
-            color: white;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            overflow: hidden;
-        }
-
-        .offer-content {
-            padding: 80px 12%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            align-items: flex-start;
-        }
-
-        .offer-small {
-            color: #d7a47e;
-            font-size: 11px;
-            letter-spacing: 3px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .offer h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(40px, 5vw, 60px);
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .offer p {
-            color: #cbbdb4;
-            margin-bottom: 28px;
-        }
-
-        .offer-image {
-            height: 100%;
-        }
-
-        .offer-image img {
-            height: 100%;
-            object-fit: cover;
-        }
-
-
-        /* ================= REVIEWS ================= */
-
-        .review-grid {
-            max-width: 1200px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .review-card {
-            position: relative;
-
-            background: white;
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            padding: 35px;
-
-            transition: 0.3s;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(50,30,15,0.08);
-        }
-
-        .quote {
-            position: absolute;
-
-            top: 15px;
-            right: 25px;
-
-            font-family: Georgia, serif;
-
-            font-size: 70px;
-
-            color: #f2e6dc;
-        }
-
-        .review-stars {
-            color: #e9a83b;
-
-            font-size: 14px;
-
-            margin-bottom: 18px;
-        }
-
-        .review-card > p {
-            color: var(--text-light);
-
-            font-size: 14px;
-
-            line-height: 1.8;
-
-            margin-bottom: 28px;
-        }
-
-        .customer {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .customer-avatar {
-            width: 45px;
-            height: 45px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 50%;
-
-            background: #f0dfd2;
-            color: var(--orange);
-
-            font-weight: 700;
-        }
-
-        .customer strong,
-        .customer span {
-            display: block;
-        }
-
-        .customer strong {
-            font-size: 13px;
-        }
-
-        .customer span {
-            color: #998c84;
-            font-size: 11px;
-        }
-
-
-        /* ================= NEWSLETTER ================= */
-
-        .newsletter {
-            background: #f3e5d9;
-
-            padding: 65px 7%;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 40px;
-        }
-
-        .newsletter > div > span {
-            color: var(--orange);
-            font-size: 11px;
-            letter-spacing: 3px;
-            font-weight: 700;
-        }
-
-        .newsletter h2 {
-            font-family: "Playfair Display", serif;
-
-            font-size: 35px;
-
-            line-height: 1.2;
-
-            margin-top: 8px;
-        }
-
-        .newsletter-form {
-            max-width: 470px;
-            width: 100%;
-
-            background: white;
-
-            border-radius: 50px;
-
-            padding: 5px;
-
-            display: flex;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-
-            border: none;
-
-            outline: none;
-
-            padding: 12px 18px;
-
-            background: transparent;
-
-            min-width: 0;
-        }
-
-        .newsletter-form button {
-            border: none;
-
-            background: var(--brown);
-            color: white;
-
-            padding: 12px 20px;
-
-            border-radius: 30px;
-
-            font-weight: 600;
-        }
-
-
-        /* ================= CONTACT ================= */
-
-        .contact {
-            max-width: 1400px;
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: 0.9fr 1.1fr;
-
-            gap: 100px;
-
-            align-items: center;
-        }
-
-        .contact-info > p {
-            max-width: 500px;
-
-            margin-bottom: 35px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-
-            gap: 15px;
-
-            margin-bottom: 20px;
-        }
-
-        .contact-item > div {
-            width: 45px;
-            height: 45px;
-
-            border-radius: 50%;
-
-            background: #f3e5d9;
-
-            color: var(--orange);
-
-            display: grid;
-            place-items: center;
-        }
-
-        .contact-item span {
-            display: flex;
-            flex-direction: column;
-
-            font-size: 13px;
-
-            color: var(--text-light);
-        }
-
-        .contact-item strong {
-            color: var(--brown);
-        }
-
-        .contact-form-wrapper {
-            background: #f5ebe3;
-
-            border-radius: 20px;
-
-            padding: 45px;
-        }
-
-        .contact-form h3 {
-            font-family: "Playfair Display", serif;
-
-            font-size: 28px;
-
-            margin-bottom: 25px;
-        }
-
-        .form-row {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-
-            border: 1px solid var(--border);
-
-            background: white;
-
-            outline: none;
-
-            border-radius: 8px;
-
-            padding: 14px;
-
-            margin-bottom: 15px;
-
-            resize: vertical;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--orange);
-        }
-
-
-        /* ================= FOOTER ================= */
-
-        .footer {
-            background: #241710;
-
-            color: white;
-
-            padding: 75px 7% 25px;
-        }
-
-        .footer-container {
-            max-width: 1300px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-
-            gap: 60px;
-        }
-
-        .footer-brand p {
-            color: #a99b92;
-
-            font-size: 13px;
-
-            max-width: 280px;
-
-            margin: 20px 0;
-        }
-
-        .footer .logo {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-links a {
-            width: 38px;
-            height: 38px;
-
-            border-radius: 50%;
-
-            display: grid;
-            place-items: center;
-
-            background: #38261d;
-
-            color: #c8b9b0;
-
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--orange);
-            color: white;
-        }
-
-        .footer-column {
-            display: flex;
-            flex-direction: column;
-            gap: 11px;
-        }
-
-        .footer-column h4 {
-            margin-bottom: 8px;
-        }
-
-        .footer-column a,
-        .footer-column p {
-            color: #a99b92;
-            font-size: 13px;
-        }
-
-        .footer-column a:hover {
-            color: white;
-        }
-
-        .footer-column strong {
-            color: white;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .footer-bottom {
-            max-width: 1300px;
-
-            margin: 60px auto 0;
-
-            padding-top: 22px;
-
-            border-top: 1px solid #44342b;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            color: #82736a;
-
-            font-size: 11px;
-        }
-
-        .footer-bottom span {
-            color: var(--orange);
-        }
-
-
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 1050px) {
-
-            .nav-menu {
-                gap: 20px;
-            }
-
-            .hero-card {
-                display: none;
-            }
-
-            .about {
-                gap: 50px;
-            }
-
-            .feature-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .review-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .review-card:last-child {
-                grid-column: span 2;
-            }
-
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .navbar {
-                height: 70px;
-            }
-
-            .nav-menu {
-
-                position: absolute;
-
-                top: 70px;
-                left: 0;
-
-                width: 100%;
-
-                background: var(--cream);
-
-                flex-direction: column;
-
-                padding: 25px;
-
-                gap: 20px;
-
-                display: none;
-
-                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            }
-
-            .nav-menu.show {
-                display: flex;
-            }
-
-            .nav-button {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .hero {
-                min-height: 700px;
-            }
-
-            .hero-container {
-                padding-top: 130px;
-            }
-
-            .hero h1 {
-                font-size: 52px;
-            }
-
-            .about,
-            .contact {
-                grid-template-columns: 1fr;
-            }
-
-            .about {
-                gap: 60px;
-            }
-
-            .about-image img {
-                height: 450px;
-            }
-
-            .experience-card {
-                right: 20px;
-            }
-
-            .offer {
-                grid-template-columns: 1fr;
-            }
-
-            .offer-image {
-                height: 350px;
-                order: -1;
-            }
-
-            .newsletter {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .review-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .review-card:last-child {
-                grid-column: auto;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .section {
-                padding: 75px 6%;
-            }
-
-            .hero-container {
-                padding-left: 6%;
-                padding-right: 6%;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .hero-content > p {
-                font-size: 14px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .hero-rating {
-                margin-top: 30px;
-            }
-
-            .feature-container {
-                grid-template-columns: 1fr;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-stats {
-                gap: 20px;
-                justify-content: space-between;
-            }
-
-            .about-stats strong {
-                font-size: 23px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form-wrapper {
-                padding: 25px;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .newsletter-form {
-                width: 100%;
-            }
-
-        }
-
-    </style>
-
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<header class="navbar">
+    <div class="container nav-content">
 
-<header class="header">
-
-    <nav class="navbar">
-
-        <a href="#home" class="logo">
-
-            <span class="logo-icon">
-                <i class="fa-solid fa-mug-hot"></i>
-            </span>
-
-            Brew<span>&</span>Bean
-
+        <a href="#" class="logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            Brew<span>Haven</span>
         </a>
 
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <ul class="nav-menu" id="navMenu">
-
-            <li>
-                <a href="#home" class="active">Home</a>
-            </li>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#menu">Menu</a>
-            </li>
-
-            <li>
-                <a href="#reviews">Reviews</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-
-
-        <a href="#menu" class="nav-button">
-            Order Coffee
-            <i class="fa-solid fa-arrow-right"></i>
+        <a href="#menu" class="nav-btn">
+            Order Now <i class="fa-solid fa-arrow-right"></i>
         </a>
 
-
-        <button class="menu-toggle" id="menuToggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </nav>
-
+    </div>
 </header>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-container">
+    <div class="container hero-content">
 
-        <div class="hero-content">
+        <div class="hero-text">
 
-            <div class="hero-label">
-
-                <span></span>
-
-                PREMIUM COFFEE EXPERIENCE
-
-            </div>
-
+            <span class="tag">
+                <i class="fa-solid fa-mug-hot"></i>
+                Premium Coffee Experience
+            </span>
 
             <h1>
-
-                Coffee that makes
-                <em>every moment</em>
-                special.
-
+                Start Your Day With
+                <span>Perfect Coffee.</span>
             </h1>
 
-
             <p>
-
-                Carefully roasted beans, handcrafted drinks,
-                and a cozy atmosphere made for unforgettable
-                moments.
-
+                Discover freshly roasted coffee, handcrafted beverages
+                and delicious treats made with passion.
             </p>
 
-
             <div class="hero-buttons">
-
-                <a href="#menu" class="btn btn-primary">
-
+                <a href="#menu" class="btn primary">
                     Explore Menu
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
-
-                <a href="#about" class="btn btn-outline">
-
+                <a href="#about" class="btn secondary">
                     Our Story
-
                 </a>
-
             </div>
 
-
-            <div class="hero-rating">
-
-                <div class="avatars">
-
-                    <span>R</span>
-                    <span>P</span>
-                    <span>A</span>
-                    <span>+</span>
-
+            <div class="hero-info">
+                <div>
+                    <strong>4.9/5</strong>
+                    <small>Customer Rating</small>
                 </div>
-
 
                 <div>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        Loved by <strong>2,000+</strong>
-                        coffee lovers
-                    </p>
-
+                    <strong>15+</strong>
+                    <small>Premium Coffees</small>
                 </div>
 
+                <div>
+                    <strong>10K+</strong>
+                    <small>Happy Customers</small>
+                </div>
             </div>
 
         </div>
 
-
-        <div class="hero-card">
-
-            <div class="floating-card">
-
-                <div class="coffee-icon">
-
-                    <i class="fa-solid fa-mug-hot"></i>
-
-                </div>
-
-
-                <div>
-
-                    <small>Today's Special</small>
-
-                    <h3>Caramel Latte</h3>
-
-                    <p>₹189</p>
-
-                </div>
-
-
-                <button>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
+        <div class="hero-image">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+                     alt="Coffee">
             </div>
 
+            <div class="floating-card">
+                <i class="fa-solid fa-star"></i>
+                <div>
+                    <strong>4.9</strong>
+                    <small>Excellent Coffee</small>
+                </div>
+            </div>
         </div>
 
     </div>
-
 </section>
 
 
-<!-- =====================================================
-     FEATURES
-===================================================== -->
+<!-- ================= FEATURES ================= -->
 
 <section class="features">
 
-    <div class="feature-container">
-
+    <div class="container feature-grid">
 
         <div class="feature">
-
             <div class="feature-icon">
                 <i class="fa-solid fa-seedling"></i>
             </div>
 
             <div>
-
                 <h3>Premium Beans</h3>
-
-                <p>
-                    100% carefully selected beans
-                </p>
-
+                <p>Carefully selected coffee beans.</p>
             </div>
-
         </div>
 
-
         <div class="feature">
-
             <div class="feature-icon">
-                <i class="fa-solid fa-fire-flame-curved"></i>
+                <i class="fa-solid fa-fire"></i>
             </div>
 
             <div>
-
                 <h3>Freshly Roasted</h3>
-
-                <p>
-                    Roasted fresh every week
-                </p>
-
+                <p>Roasted fresh for amazing flavor.</p>
             </div>
-
         </div>
 
-
         <div class="feature">
-
             <div class="feature-icon">
                 <i class="fa-solid fa-heart"></i>
             </div>
 
             <div>
-
                 <h3>Made With Love</h3>
-
-                <p>
-                    Handcrafted for you
-                </p>
-
+                <p>Every cup is crafted with passion.</p>
             </div>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                <i class="fa-solid fa-truck-fast"></i>
-            </div>
-
-            <div>
-
-                <h3>Fast Delivery</h3>
-
-                <p>
-                    Fresh coffee at your door
-                </p>
-
-            </div>
-
         </div>
 
     </div>
@@ -1787,232 +1018,215 @@
 </section>
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about section" id="about">
 
+    <div class="container about-grid">
 
-    <div class="about-image">
+        <div class="about-images">
 
-        <img
-        src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&q=80"
-        alt="Fresh coffee beans">
+            <img class="about-main"
+                 src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+                 alt="Coffee Shop">
 
-
-        <div class="experience-card">
-
-            <strong>10+</strong>
-
-            <span>
-                Years of<br>
-                Experience
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="about-content">
-
-        <div class="section-label">
-            OUR STORY
-        </div>
-
-
-        <h2>
-
-            More than coffee,
-            <em>it's a feeling.</em>
-
-        </h2>
-
-
-        <p>
-
-            Brew & Bean started with a simple idea:
-            create a place where great coffee and great
-            conversations come together.
-
-        </p>
-
-
-        <p>
-
-            From carefully sourced beans to every handcrafted
-            cup, we put passion into everything we do.
-            Our goal is to make your everyday coffee moments
-            extraordinary.
-
-        </p>
-
-
-        <div class="about-stats">
-
-            <div>
-
-                <strong>10+</strong>
-
-                <span>Years</span>
-
-            </div>
-
-
-            <div>
-
-                <strong>25+</strong>
-
-                <span>Coffee Blends</span>
-
-            </div>
-
-
-            <div>
-
-                <strong>2K+</strong>
-
-                <span>Happy Customers</span>
-
+            <div class="experience">
+                <strong>8+</strong>
+                <span>Years of<br>Experience</span>
             </div>
 
         </div>
 
+        <div class="about-content">
 
-        <a href="#contact" class="text-link">
+            <span class="section-label">ABOUT BREW HAVEN</span>
 
-            Discover Our Story
+            <h2>
+                More Than Coffee,
+                <span>It's an Experience.</span>
+            </h2>
 
-            <i class="fa-solid fa-arrow-right"></i>
+            <p>
+                At Brew Haven, we believe great coffee brings people
+                together. Our journey started with a simple passion:
+                creating delicious coffee in a warm and welcoming space.
+            </p>
 
-        </a>
+            <p>
+                From carefully sourced beans to expertly crafted drinks,
+                every detail is designed to give you an unforgettable
+                coffee experience.
+            </p>
+
+            <div class="about-list">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>100% Premium Arabica Beans</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Expertly Crafted Coffee</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Fresh Ingredients Every Day</span>
+                </div>
+
+            </div>
+
+            <a href="#contact" class="btn primary">
+                Visit Our Cafe
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     MENU
-===================================================== -->
+<!-- ================= MENU ================= -->
 
 <section class="menu section" id="menu">
 
+    <div class="container">
 
-    <div class="section-heading">
+        <div class="section-heading">
 
-        <div class="section-label">
-            OUR MENU
+            <span class="section-label">OUR MENU</span>
+
+            <h2>
+                Discover Your
+                <span>Favorite Coffee</span>
+            </h2>
+
+            <p>
+                Freshly prepared beverages made just for you.
+            </p>
+
         </div>
 
 
-        <h2>
+        <div class="menu-grid">
 
-            Crafted for
-            <em>coffee lovers.</em>
+            <!-- Card 1 -->
 
-        </h2>
+            <div class="coffee-card">
 
+                <div class="coffee-image">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                         alt="Cappuccino">
 
-        <p>
+                    <span class="badge">Popular</span>
+                </div>
 
-            Discover our selection of handcrafted coffee
-            and delicious treats.
+                <div class="coffee-info">
 
-        </p>
+                    <div class="coffee-title">
+                        <h3>Cappuccino</h3>
+                        <strong>₹180</strong>
+                    </div>
 
-    </div>
+                    <p>
+                        Rich espresso with steamed milk and creamy foam.
+                    </p>
 
+                    <button>
+                        Add to Order
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
 
-    <div class="menu-filter">
-
-        <button class="filter-btn active"
-                data-filter="all">
-
-            All
-
-        </button>
-
-        <button class="filter-btn"
-                data-filter="coffee">
-
-            Coffee
-
-        </button>
-
-        <button class="filter-btn"
-                data-filter="cold">
-
-            Cold Drinks
-
-        </button>
-
-        <button class="filter-btn"
-                data-filter="dessert">
-
-            Desserts
-
-        </button>
-
-    </div>
-
-
-    <div class="menu-grid">
-
-
-        <!-- CAPPUCCINO -->
-
-        <div class="product-card"
-             data-category="coffee">
-
-            <div class="product-image">
-
-                <span class="product-badge">
-                    Bestseller
-                </span>
-
-                <img
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
-                alt="Cappuccino">
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
+                </div>
 
             </div>
 
 
-            <div class="product-info">
+            <!-- Card 2 -->
 
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(124)</span>
+            <div class="coffee-card">
+
+                <div class="coffee-image">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+                         alt="Latte">
                 </div>
 
+                <div class="coffee-info">
 
-                <h3>Cappuccino</h3>
+                    <div class="coffee-title">
+                        <h3>Classic Latte</h3>
+                        <strong>₹200</strong>
+                    </div>
 
+                    <p>
+                        Smooth espresso blended with warm steamed milk.
+                    </p>
 
-                <p>
-                    Rich espresso with silky steamed milk
-                    and creamy foam.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹169</strong>
-
-
-                    <button class="add-cart">
-
+                    <button>
+                        Add to Order
                         <i class="fa-solid fa-plus"></i>
+                    </button>
 
-                        Add
+                </div>
 
+            </div>
+
+
+            <!-- Card 3 -->
+
+            <div class="coffee-card">
+
+                <div class="coffee-image">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                         alt="Espresso">
+                </div>
+
+                <div class="coffee-info">
+
+                    <div class="coffee-title">
+                        <h3>Espresso</h3>
+                        <strong>₹140</strong>
+                    </div>
+
+                    <p>
+                        Bold, intense and perfectly brewed espresso.
+                    </p>
+
+                    <button>
+                        Add to Order
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+
+            <div class="coffee-card">
+
+                <div class="coffee-image">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80"
+                         alt="Mocha">
+                </div>
+
+                <div class="coffee-info">
+
+                    <div class="coffee-title">
+                        <h3>Chocolate Mocha</h3>
+                        <strong>₹220</strong>
+                    </div>
+
+                    <p>
+                        Espresso, chocolate and steamed milk combined.
+                    </p>
+
+                    <button>
+                        Add to Order
+                        <i class="fa-solid fa-plus"></i>
                     </button>
 
                 </div>
@@ -2021,527 +1235,135 @@
 
         </div>
 
-
-        <!-- CARAMEL LATTE -->
-
-        <div class="product-card"
-             data-category="coffee">
-
-            <div class="product-image">
-
-                <span class="product-badge new">
-                    New
-                </span>
-
-                <img
-                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80"
-                alt="Caramel Latte">
-
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(98)</span>
-                </div>
-
-
-                <h3>Caramel Latte</h3>
-
-
-                <p>
-                    Smooth espresso, steamed milk and
-                    rich caramel flavor.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹189</strong>
-
-
-                    <button class="add-cart">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        Add
-
-                    </button>
-
-                </div>
-
-            </div>
-
+        <div class="menu-button">
+            <a href="#" class="btn secondary">
+                View Full Menu
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
-
-
-        <!-- ICED COFFEE -->
-
-        <div class="product-card"
-             data-category="cold">
-
-            <div class="product-image">
-
-                <span class="product-badge">
-                    Popular
-                </span>
-
-
-                <img
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
-                alt="Iced Coffee">
-
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(156)</span>
-                </div>
-
-
-                <h3>Iced Coffee</h3>
-
-
-                <p>
-                    Chilled espresso blended with milk
-                    and smooth ice.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹149</strong>
-
-
-                    <button class="add-cart">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        Add
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- DONUT -->
-
-        <div class="product-card"
-             data-category="dessert">
-
-            <div class="product-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80"
-                alt="Chocolate Donut">
-
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(87)</span>
-                </div>
-
-
-                <h3>Chocolate Donut</h3>
-
-
-                <p>
-                    Soft baked donut covered with
-                    premium chocolate.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹99</strong>
-
-
-                    <button class="add-cart">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        Add
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ESPRESSO -->
-
-        <div class="product-card"
-             data-category="coffee">
-
-            <div class="product-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
-                alt="Espresso">
-
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(112)</span>
-                </div>
-
-
-                <h3>Classic Espresso</h3>
-
-
-                <p>
-                    Bold and aromatic espresso made
-                    from premium Arabica beans.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹129</strong>
-
-
-                    <button class="add-cart">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        Add
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- CAKE -->
-
-        <div class="product-card"
-             data-category="dessert">
-
-            <div class="product-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
-                alt="Chocolate Cake">
-
-
-                <button class="favorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-rating">
-                    ★★★★★
-                    <span>(76)</span>
-                </div>
-
-
-                <h3>Chocolate Cake</h3>
-
-
-                <p>
-                    Moist chocolate cake with rich
-                    creamy chocolate layers.
-                </p>
-
-
-                <div class="product-bottom">
-
-                    <strong>₹159</strong>
-
-
-                    <button class="add-cart">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        Add
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="menu-button">
-
-        <a href="#" class="btn btn-dark">
-
-            View Full Menu
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     OFFER
-===================================================== -->
+<!-- ================= OFFER ================= -->
 
-<section class="offer">
+<section class="offer" id="offers">
 
-    <div class="offer-content">
+    <div class="container offer-content">
 
-        <span class="offer-small">
-            WEEKEND SPECIAL
-        </span>
+        <div>
 
+            <span class="section-label">SPECIAL OFFER</span>
 
-        <h2>
+            <h2>
+                Get 20% Off Your
+                <span>First Order</span>
+            </h2>
 
-            Your weekend
-            deserves a better
-            <em>coffee.</em>
+            <p>
+                Join our coffee community and enjoy an exclusive
+                discount on your first order.
+            </p>
 
-        </h2>
+            <a href="#menu" class="btn light">
+                Claim Offer
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
+        </div>
 
-        <p>
-
-            Get 20% off on all coffee drinks every
-            Saturday & Sunday.
-
-        </p>
-
-
-        <a href="#menu" class="btn btn-light">
-
-            Order Now
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-
-    <div class="offer-image">
-
-        <img
-        src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=900&q=80"
-        alt="Coffee">
+        <div class="offer-icon">
+            <i class="fa-solid fa-mug-hot"></i>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     REVIEWS
-===================================================== -->
+<!-- ================= TESTIMONIAL ================= -->
 
-<section class="reviews section" id="reviews">
+<section class="reviews section">
 
+    <div class="container">
 
-    <div class="section-heading">
+        <div class="section-heading">
 
-        <div class="section-label">
-            TESTIMONIALS
-        </div>
+            <span class="section-label">CUSTOMER REVIEWS</span>
 
-
-        <h2>
-
-            What our customers
-            <em>say.</em>
-
-        </h2>
-
-    </div>
-
-
-    <div class="review-grid">
-
-
-        <div class="review-card">
-
-            <div class="quote">
-                "
-            </div>
-
-
-            <div class="review-stars">
-                ★★★★★
-            </div>
-
-
-            <p>
-
-                The best coffee I've had in Pune.
-                The atmosphere is beautiful and the
-                staff are incredibly friendly.
-
-            </p>
-
-
-            <div class="customer">
-
-                <div class="customer-avatar">
-                    R
-                </div>
-
-                <div>
-
-                    <strong>
-                        Rahul Patil
-                    </strong>
-
-                    <span>
-                        Regular Customer
-                    </span>
-
-                </div>
-
-            </div>
+            <h2>
+                Loved By
+                <span>Coffee Lovers</span>
+            </h2>
 
         </div>
 
 
-        <div class="review-card">
+        <div class="review-grid">
 
-            <div class="quote">
-                "
-            </div>
+            <div class="review">
 
-
-            <div class="review-stars">
-                ★★★★★
-            </div>
-
-
-            <p>
-
-                I absolutely love their caramel latte.
-                The perfect place to work, relax and
-                enjoy amazing coffee.
-
-            </p>
-
-
-            <div class="customer">
-
-                <div class="customer-avatar">
-                    P
+                <div class="stars">
+                    ★★★★★
                 </div>
 
-                <div>
+                <p>
+                    "Amazing coffee and beautiful atmosphere.
+                    Brew Haven has quickly become my favorite cafe!"
+                </p>
 
-                    <strong>
-                        Priya Sharma
-                    </strong>
-
-                    <span>
-                        Coffee Lover
-                    </span>
-
+                <div class="customer">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Aditya Sharma</strong>
+                        <small>Regular Customer</small>
+                    </div>
                 </div>
 
             </div>
 
-        </div>
 
+            <div class="review">
 
-        <div class="review-card">
-
-            <div class="quote">
-                "
-            </div>
-
-
-            <div class="review-stars">
-                ★★★★★
-            </div>
-
-
-            <p>
-
-                Great coffee, delicious desserts and
-                a really peaceful environment.
-                Highly recommended!
-
-            </p>
-
-
-            <div class="customer">
-
-                <div class="customer-avatar">
-                    A
+                <div class="stars">
+                    ★★★★★
                 </div>
 
-                <div>
+                <p>
+                    "The cappuccino is absolutely delicious.
+                    Great service and very friendly staff."
+                </p>
 
-                    <strong>
-                        Akshay More
-                    </strong>
+                <div class="customer">
+                    <div class="avatar">P</div>
+                    <div>
+                        <strong>Priya Patil</strong>
+                        <small>Coffee Lover</small>
+                    </div>
+                </div>
 
-                    <span>
-                        Happy Customer
-                    </span>
+            </div>
 
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Perfect place to work, relax and enjoy
+                    really good coffee."
+                </p>
+
+                <div class="customer">
+                    <div class="avatar">R</div>
+                    <div>
+                        <strong>Rahul Joshi</strong>
+                        <small>Customer</small>
+                    </div>
                 </div>
 
             </div>
@@ -2553,185 +1375,26 @@
 </section>
 
 
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
+<!-- ================= NEWSLETTER ================= -->
 
 <section class="newsletter">
 
-    <div>
+    <div class="container newsletter-content">
 
-        <span>
-            STAY IN THE LOOP
-        </span>
+        <div>
+            <span class="section-label">STAY CONNECTED</span>
 
-
-        <h2>
-
-            Get coffee news &
-            <em>special offers.</em>
-
-        </h2>
-
-    </div>
-
-
-    <form class="newsletter-form">
-
-        <input
-        type="email"
-        placeholder="Enter your email address"
-        required>
-
-
-        <button type="submit">
-
-            Subscribe
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="contact section" id="contact">
-
-
-    <div class="contact-info">
-
-        <div class="section-label">
-            GET IN TOUCH
+            <h2>
+                Get Fresh Coffee News
+                <span>& Offers</span>
+            </h2>
         </div>
 
-
-        <h2>
-
-            Come say
-            <em>hello.</em>
-
-        </h2>
-
-
-        <p>
-
-            Whether you're looking for your morning coffee,
-            a place to work or somewhere to catch up with
-            friends, we'd love to have you.
-
-        </p>
-
-
-        <div class="contact-item">
-
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            <span>
-
-                <strong>
-                    Visit Us
-                </strong>
-
-                FC Road, Pune, Maharashtra
-
-            </span>
-
-        </div>
-
-
-        <div class="contact-item">
-
-            <div>
-                <i class="fa-solid fa-phone"></i>
-            </div>
-
-            <span>
-
-                <strong>
-                    Call Us
-                </strong>
-
-                +91 98765 43210
-
-            </span>
-
-        </div>
-
-
-        <div class="contact-item">
-
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-
-            <span>
-
-                <strong>
-                    Email Us
-                </strong>
-
-                hello@brewandbean.com
-
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="contact-form-wrapper">
-
-        <form class="contact-form">
-
-            <h3>
-                Send us a message
-            </h3>
-
-
-            <div class="form-row">
-
-                <input
-                type="text"
-                placeholder="Your Name"
-                required>
-
-
-                <input
-                type="email"
-                placeholder="Your Email"
-                required>
-
-            </div>
-
-
-            <input
-            type="text"
-            placeholder="Subject">
-
-
-            <textarea
-            rows="5"
-            placeholder="Your Message"
-            required></textarea>
-
-
-            <button class="btn btn-primary"
-                    type="submit">
-
-                Send Message
-
-                <i class="fa-solid fa-paper-plane"></i>
-
+        <form>
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">
+                Subscribe
             </button>
-
         </form>
 
     </div>
@@ -2739,447 +1402,133 @@
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= CONTACT ================= -->
 
-<footer class="footer">
+<section class="contact section" id="contact">
 
+    <div class="container contact-grid">
 
-    <div class="footer-container">
+        <div>
 
+            <span class="section-label">CONTACT US</span>
 
-        <div class="footer-brand">
-
-            <a href="#home" class="logo">
-
-                <span class="logo-icon">
-
-                    <i class="fa-solid fa-mug-hot"></i>
-
-                </span>
-
-                Brew<span>&</span>Bean
-
-            </a>
-
+            <h2>
+                Come & Enjoy
+                <span>Great Coffee.</span>
+            </h2>
 
             <p>
-
-                Premium coffee, handcrafted with passion.
-                Every cup tells a story.
-
+                We'd love to see you at Brew Haven.
+                Visit us for freshly brewed coffee and good vibes.
             </p>
 
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>Address</strong>
+                    <p>123 Coffee Street, Pune, Maharashtra</p>
+                </div>
+            </div>
 
-            <div class="social-links">
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>Phone</strong>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
 
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <strong>Email</strong>
+                    <p>hello@brewhaven.com</p>
+                </div>
             </div>
 
         </div>
 
 
-        <div class="footer-column">
+        <div class="contact-box">
 
-            <h4>
-                Quick Links
-            </h4>
+            <h3>Send Us a Message</h3>
 
-            <a href="#home">
-                Home
-            </a>
+            <form>
 
-            <a href="#about">
-                About Us
-            </a>
+                <input type="text" placeholder="Your Name" required>
 
-            <a href="#menu">
-                Menu
-            </a>
+                <input type="email" placeholder="Your Email" required>
 
-            <a href="#reviews">
-                Reviews
-            </a>
+                <textarea rows="5"
+                          placeholder="Your Message"
+                          required></textarea>
 
-        </div>
+                <button type="submit" class="btn primary">
+                    Send Message
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
 
-
-        <div class="footer-column">
-
-            <h4>
-                Support
-            </h4>
-
-            <a href="#">
-                FAQ
-            </a>
-
-            <a href="#">
-                Privacy Policy
-            </a>
-
-            <a href="#">
-                Terms & Conditions
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                Opening Hours
-            </h4>
-
-            <p>
-                Monday - Friday
-            </p>
-
-            <strong>
-                8:00 AM - 10:00 PM
-            </strong>
-
-            <p>
-                Saturday - Sunday
-            </p>
-
-            <strong>
-                9:00 AM - 11:00 PM
-            </strong>
+            </form>
 
         </div>
 
     </div>
 
+</section>
 
-    <div class="footer-bottom">
 
-        <p>
-            © 2026 Brew & Bean. All Rights Reserved.
-        </p>
+<!-- ================= FOOTER ================= -->
 
-        <p>
-            Made with <span>♥</span> for coffee lovers.
-        </p>
+<footer>
 
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-mug-hot"></i>
+                Brew<span>Haven</span>
+            </a>
+
+            <p>
+                Premium coffee, delicious moments and
+                good vibes — every single day.
+            </p>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+        </div>
+
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <div>
+            <h4>Opening Hours</h4>
+            <p>Monday - Friday</p>
+            <strong>7:00 AM - 10:00 PM</strong>
+
+            <p>Saturday - Sunday</p>
+            <strong>8:00 AM - 11:00 PM</strong>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Brew Haven. All Rights Reserved.
     </div>
 
 </footer>
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-    /* ================= MOBILE MENU ================= */
-
-    const menuToggle =
-        document.getElementById("menuToggle");
-
-    const navMenu =
-        document.getElementById("navMenu");
-
-
-    menuToggle.addEventListener("click", function () {
-
-        navMenu.classList.toggle("show");
-
-        const icon =
-            menuToggle.querySelector("i");
-
-
-        if (navMenu.classList.contains("show")) {
-
-            icon.classList.remove("fa-bars");
-
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
-
-    });
-
-
-    /* Close menu */
-
-    document.querySelectorAll(".nav-menu a")
-        .forEach(function(link) {
-
-            link.addEventListener("click", function() {
-
-                navMenu.classList.remove("show");
-
-                const icon =
-                    menuToggle.querySelector("i");
-
-                icon.classList.remove("fa-xmark");
-
-                icon.classList.add("fa-bars");
-
-            });
-
-        });
-
-
-    /* ================= MENU FILTER ================= */
-
-    const filterButtons =
-        document.querySelectorAll(".filter-btn");
-
-    const products =
-        document.querySelectorAll(".product-card");
-
-
-    filterButtons.forEach(function(button) {
-
-        button.addEventListener("click", function() {
-
-            filterButtons.forEach(function(btn) {
-
-                btn.classList.remove("active");
-
-            });
-
-
-            button.classList.add("active");
-
-
-            const filter =
-                button.getAttribute("data-filter");
-
-
-            products.forEach(function(product) {
-
-                const category =
-                    product.getAttribute("data-category");
-
-
-                if (
-                    filter === "all" ||
-                    category === filter
-                ) {
-
-                    product.style.display = "block";
-
-                } else {
-
-                    product.style.display = "none";
-
-                }
-
-            });
-
-        });
-
-    });
-
-
-    /* ================= FAVORITE ================= */
-
-    document.querySelectorAll(".favorite")
-        .forEach(function(button) {
-
-            button.addEventListener("click", function() {
-
-                const icon =
-                    button.querySelector("i");
-
-
-                icon.classList.toggle("fa-regular");
-
-                icon.classList.toggle("fa-solid");
-
-            });
-
-        });
-
-
-    /* ================= ADD TO CART ================= */
-
-    document.querySelectorAll(".add-cart")
-        .forEach(function(button) {
-
-            button.addEventListener("click", function() {
-
-                const oldText =
-                    button.innerHTML;
-
-
-                button.innerHTML =
-                    '<i class="fa-solid fa-check"></i> Added';
-
-
-                button.style.background =
-                    "#3a2419";
-
-                button.style.color =
-                    "#fff";
-
-
-                setTimeout(function() {
-
-                    button.innerHTML =
-                        oldText;
-
-                    button.style.background =
-                        "";
-
-                    button.style.color =
-                        "";
-
-                }, 1500);
-
-            });
-
-        });
-
-
-    /* ================= CONTACT FORM ================= */
-
-    const contactForm =
-        document.querySelector(".contact-form");
-
-
-    contactForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        const button =
-            contactForm.querySelector("button");
-
-
-        const oldText =
-            button.innerHTML;
-
-
-        button.innerHTML =
-            '<i class="fa-solid fa-check"></i> Message Sent!';
-
-
-        setTimeout(function() {
-
-            button.innerHTML =
-                oldText;
-
-            contactForm.reset();
-
-        }, 2000);
-
-    });
-
-
-    /* ================= NEWSLETTER ================= */
-
-    const newsletterForm =
-        document.querySelector(".newsletter-form");
-
-
-    newsletterForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        const button =
-            newsletterForm.querySelector("button");
-
-
-        const oldText =
-            button.innerHTML;
-
-
-        button.innerHTML =
-            '<i class="fa-solid fa-check"></i> Subscribed';
-
-
-        setTimeout(function() {
-
-            button.innerHTML =
-                oldText;
-
-            newsletterForm.reset();
-
-        }, 2000);
-
-    });
-
-
-    /* ================= ACTIVE NAV ================= */
-
-    const sections =
-        document.querySelectorAll("section[id]");
-
-    const navLinks =
-        document.querySelectorAll(".nav-menu a");
-
-
-    window.addEventListener("scroll", function() {
-
-        let current = "";
-
-
-        sections.forEach(function(section) {
-
-            const sectionTop =
-                section.offsetTop - 160;
-
-
-            if (window.scrollY >= sectionTop) {
-
-                current =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(function(link) {
-
-            link.classList.remove("active");
-
-
-            if (
-                link.getAttribute("href") ===
-                "#" + current
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    });
-
-</script>
 
 </body>
 </html>
